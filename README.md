@@ -8,6 +8,18 @@ similarity scoring.
 Built with [uv](https://docs.astral.sh/uv/), PyTorch (CUDA), and
 [`open_clip_torch`](https://github.com/mlfoundations/open_clip).
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mbednarski/emb/blob/main/notebooks/clip_demo.ipynb)
+
+## Run in Colab (zero setup)
+
+Click the badge above. The first cell auto-detects Colab, clones this
+repo, and installs the one missing dependency (`open-clip-torch`) — the
+rest (torch, torchvision, numpy, matplotlib, sklearn, ipywidgets) is
+already pre-installed on Colab. Then *Runtime → Run all*.
+
+**Switch to a GPU runtime first** (*Runtime → Change runtime type →
+T4 GPU*); CPU works but ViT-B-32 image encoding crawls.
+
 ## What's inside
 
 - `notebooks/clip_demo.ipynb` — the demonstration: intro + diagram,
@@ -23,7 +35,7 @@ Built with [uv](https://docs.astral.sh/uv/), PyTorch (CUDA), and
   prefers the right caption per image).
 - `docs/superpowers/specs/2026-05-13-clip-demo-design.md` — design notes.
 
-## Quick start
+## Run locally
 
 Requires Python 3.11+ and `uv`. A CUDA GPU is recommended (the
 `pyproject.toml` pins the CUDA 12.1 wheels of `torch`/`torchvision`);
